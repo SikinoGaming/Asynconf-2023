@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Simulateur d’emprunt pour l’achat d’une voiture by GreenBank</title>
+</head>
+<body>
+    <header>
+        <h1>GREEN BANK</h1>
+        <p>Simulateur d’emprunt pour l’achat d’une voiture.</p>
+    </header>
+    <div id="main">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h2>Type de Véhicule</h2>
+            {{ form.type }}
+            <h2>Énergie du Véhicule</h2>
+            {{ form.energy }}
+            <h2>Kilométrage du Véhicule</h2>
+            {{ form.km }}
+            <h2>Année de Fabrication du Véhicule</h2>
+            {{ form.fabyear }}
+            <h2>Nombre de Passagers</h2>
+            {{ form.passagers }}<br>
+            <input type="submit" value="Valider">
+        </form>
+        <div id="score">
+            <img src="{% static 'gauge_bg.png' %}" id="fond" alt="Fond de la gauge">
+            <img src="{% static 'gauge.png' %}" id="neddle" alt="Aiguille de la Gauge">
+            <p>Indice de Respect de la Planète</p>
+            <p>Votre taux d'emprunt est de {{ rate }}%</p>
+        </div>
+    </div>
+    <footer>
+        <p>💻 with ❤️ by Sikino</p>
+        <p>For <a target="_blank" href="https://asynconf.fr/">Asynconf 2023</a>.</p>
+    </footer>
+    <style>
+        #neddle {
+            rotate: {{ rotate }}deg;
+        }
+    </style>
+</body>
+</html>

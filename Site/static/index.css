@@ -1,0 +1,103 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 40px;
+    color: #80A351;
+    background-color: #2b2929;
+}
+
+header p {
+    color: #fff;
+}
+
+footer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 20px;
+    color: #2b2929;
+    background-color: #2b2929;
+}
+
+footer p {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+}
+
+#main {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div div p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #80A351;
+    background-color: #fff;
+}
+
+p {
+    color: #2b2929
+}
+
+select, input {
+    background-color: #2b2929;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+input {
+    background-color: #80A351;
+}
+
+img {
+    height: 500px;
+    width: 500px;
+}
+
+#fond {
+    position: absolute;
+    margin-bottom: 20%;
+}
